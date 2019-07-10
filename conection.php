@@ -6,5 +6,6 @@
   define('DB', 'servicos');
 
   $conn = mysqli_connect(HOST, SENHA, USUARIO, DB) or die("Não foi possivel conectar!");
+  mysqli_set_charset($conn, 'utf-8');
 
  ?>

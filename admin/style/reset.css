@@ -6,13 +6,11 @@
 }
 
 /* MENU */
-#menu{
-  height: 100%;
-}
 .menu{
   width: 20%;
   background-color: #094DDE;
   position: absolute;
+  height: 800px;
   display: inline-block;
 }
 .menu h1{

@@ -1,0 +1,55 @@
+/* RESET */
+*{
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.header h1{
+  font-size: 30px;
+  padding: 5%;
+}
+
+/* FORM */
+.form p{
+  padding: 2%;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.form p select{
+  width: 20%;
+  margin-left: 5%;
+  padding: 1%;
+}
+.form p input{
+  padding: 1%;
+  text-align: center;
+  font-size: 20px;
+  background-color: #094DDE;
+  border: 0;
+  color: #fff;
+}
+.form p input[name="valor_nota"]{
+  background: 0;
+  padding: 1%;
+  margin-left: 5%;
+  border: 1px solid rgba(170, 170, 170, 0.8);
+  color: #000;
+}
+.form p input[name="motivo"], [name="obs"]{
+  width: 70%;
+  font-size: 20px;
+  background: 0;
+  padding: 1%;
+  margin-left: 5%;
+  border: 1px solid rgba(170, 170, 170, 0.8);
+  color: #000;
+}
+.form p input[name="obs"]{
+  width: 70%;
+  font-size: 20px;
+  background: 0;
+  padding: 1%;
+  margin-left: 5%;
+  border: 1px solid rgba(170, 170, 170, 0.8);
+  color: #000;
+}

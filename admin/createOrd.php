@@ -14,6 +14,7 @@
     <title>Sistema do <?php echo $_SESSION['nome']; ?></title>
     <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/createOrd.css">
     <script type="text/javascript" src="javascript/script.js"></script>
     <script type="text/javascript">
       window.onLoad = tamanho_menu();
@@ -34,6 +35,7 @@
          <ul>
            <li><a href="index.php">Painel</a></li>
            <li><a href="createOrd.php">Criar Ordem de Serviço</a></li>
+           <li><a href="#">Registros de Ordens</a></li>
            <li><a href="#">Perfil</a></li>
            <li><a href="#">Casdastrar</a></li>
            <li><a href="../logout.php">Sair</a></li>
@@ -42,9 +44,58 @@
      </nav>
 
      <main class="container">
-        <form class="form" action="php/pdf.php" method="post">
-          <p>Nome do Funcionário: <input type="text" name="nome_funcionario" placeholder="Nome do funcionario"></p>
-          
+
+       <header class="header">
+        <h1>Fazer Ordem De Serviço</h1>
+       </header>
+
+        <form class="form" action="php/ordem.php" method="post">
+          <p>Nome do Funcionário: <select name="nome_funcionario" required>
+            <option>Selecionar...</option>
+
+              <?php
+                $sql = "SELECT * FROM user_none";
+                $query = mysqli_query($conn, $sql);
+
+                while ($dado = mysqli_fetch_array($query)) {
+              ?>
+
+              <option value="<?php echo $dado['user_nome'];?>"><?php echo $dado['user_nome'];?></option>
+
+              <?php }?>
+
+          </select></p>
+
+          <p>Nome do ADMIN: <select name="nome_admin" required>
+
+            <option value="<?php echo $_SESSION['nome'];?>"><?php echo $_SESSION['nome'];?></option>
+
+          </select></p>
+
+          <p>Nome do Cliente: <select name="nome_cliente" required>
+            <option>Selecionar...</option>
+
+              <?php
+                $sql = "SELECT * FROM clientes";
+                $query = mysqli_query($conn, $sql);
+
+                while ($dado = mysqli_fetch_array($query)) {
+              ?>
+
+              <option value="<?php echo $dado['cli_nome'];?>"><?php echo $dado['cli_nome'];?></option>
+
+              <?php }?>
+
+          </select></p>
+
+          <p>Motivo da Chamada: <input type="text" name="motivo"></p>
+
+          <p>Observações: <input type="text" name="obs"> </p>
+
+          <p>Valor da nota: <input type="number" name="valor_nota" step="0.01"></p>
+
+          <p><input type="submit" value="Imprimir Ordem"></p>
+
         </form>
      </main>
 
