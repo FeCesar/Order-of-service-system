@@ -1,0 +1,40 @@
+/* MAIN */
+.main h1{
+  padding: 5%;
+  font-size: 30px;
+  display: inline-block;
+  width: 40%;
+}
+.main form{
+  display: inline-block;
+  width: 40%;
+}
+.box{
+  width: 80%;
+  display: block;
+  margin-left: 10%;
+  height: 440px;
+  overflow: auto;
+}
+.ordem{
+  width: 99%;
+  height: 400px;
+  margin-top: 1%;
+  display: block;
+  list-style: none;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+.ordem li{
+  padding: 1.3%;
+}
+.ordem span{
+  font-weight: bold;
+}
+.ordem form{
+  display: inline-block;
+  margin-left: 10%;
+}
+.ordem span[name='id']{
+  text-decoration: underline;
+  font-size: 18px;
+}

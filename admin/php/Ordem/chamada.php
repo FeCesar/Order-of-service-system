@@ -1,7 +1,8 @@
 <?php
 
   session_start();
-  include('../../conection.php');
+  include('../../../conection.php');
+  include('verifica_login.php');
 
   $nome_admin = $_SESSION['nome_admin'];
 
@@ -25,7 +26,7 @@
   $sql = "INSERT INTO chamadas VALUES ($num, $valor_nota, '$nome_admin', '$nome_funcionario', '$nome_cliente', '$motivo', now(), now())";
   $query = mysqli_query($conn, $sql) or die ("Falha ao enviar os dados!");
 
-  header('Location: ../index.php');
+  header('Location: ../../index.php');
 
 
 ?>

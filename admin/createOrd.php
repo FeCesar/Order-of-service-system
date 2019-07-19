@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/createOrd.css">
-    <script type="text/javascript" src="javascript/script.js"></script>
+    <script type="text/javascript" src="../javascript/script.js"></script>
     <script type="text/javascript">
       window.onLoad = tamanho_menu();
     </script>
@@ -35,7 +35,7 @@
          <ul>
            <li><a href="index.php">Painel</a></li>
            <li><a href="createOrd.php">Criar Ordem de Serviço</a></li>
-           <li><a href="#">Registros de Ordens</a></li>
+           <li><a href="registrosOrdens.php">Registros de Ordens</a></li>
            <li><a href="#">Perfil</a></li>
            <li><a href="#">Casdastrar</a></li>
            <li><a href="../logout.php">Sair</a></li>
@@ -49,7 +49,7 @@
         <h1>Fazer Ordem De Serviço</h1>
        </header>
 
-        <form class="form" action="php/ordem.php" method="post">
+        <form class="form" action="php/ordem/ordem.php" method="post">
           <p>Nome do Funcionário: <select name="nome_funcionario" required>
             <option>Selecionar...</option>
 
@@ -92,7 +92,7 @@
 
           <p>Observações: <input type="text" name="obs"> </p>
 
-          <p>Valor da nota: <input type="number" name="valor_nota" step="0.01"></p>
+          <p>Valor da Ordem: <input type="number" name="valor_nota" step="0.01"></p>
 
           <p><input type="submit" value="Imprimir Ordem"></p>
 

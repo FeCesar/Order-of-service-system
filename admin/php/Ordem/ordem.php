@@ -1,10 +1,11 @@
 <?php
 
 session_start();
-include('../../conection.php');
+include('../../../conection.php');
+include('verifica_login.php');
 
-if(empty($_POST['nome_admin']) || empty($_POST['nome_cliente']) || empty($_POST['nome_funcionario']) || empty($_POST['valor_nota'])){
-  header('Location: createOrd.php');
+if(empty($_POST['nome_admin']) || empty($_POST['nome_cliente']) || empty($_POST['nome_funcionario']) || empty($_POST['valor_nota']) || empty($_POST['motivo']) || empty($_POST['obs'])){
+  header('Location: ../../createOrd.php');
   exit();
 }
 

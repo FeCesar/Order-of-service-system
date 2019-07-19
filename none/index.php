@@ -32,10 +32,8 @@
 
          <ul>
            <li><a href="index.php">Painel</a></li>
-           <li><a href="createOrd.php">Criar Ordem de Serviço</a></li>
            <li><a href="registrosOrdens.php">Registros de Ordens</a></li>
            <li><a href="#">Perfil</a></li>
-           <li><a href="#">Casdastrar</a></li>
            <li><a href="../logout.php">Sair</a></li>
          </ul>
        </div>
