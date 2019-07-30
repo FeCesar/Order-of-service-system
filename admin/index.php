@@ -1,6 +1,7 @@
 <?php
 
   session_start();
+  include('../conection.php');
   include('../verifica-login.php');
 
 ?>
@@ -13,6 +14,7 @@
     <title>Sistema do <?php echo $_SESSION['nome']; ?></title>
     <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/index.css">
     <script type="text/javascript" src="../javascript/script.js"></script>
     <script type="text/javascript">
       window.onLoad = tamanho_menu();
@@ -40,5 +42,62 @@
          </ul>
        </div>
      </nav>
+
+     <main class="container main">
+       <h1>Painel</h1>
+
+       <article class="box">
+         <h2>Total de Chamadas:</h2>
+         <div class="boxDivision">
+           <h4>No Dia: </h4>
+           <?php echo "<span>31</span>"; ?>
+         </div>
+         <div class="boxDivision">
+           <h4>Na Semana: </h4>
+           <?php echo "<span>31</span>"; ?>
+         </div>
+         <div class="boxDivision">
+           <h4>No Mês: </h4>
+           <?php echo "<span>31</span>"; ?>
+         </div>
+         <div class="boxDivision">
+           <h4>Total: </h4>
+           <?php echo "<span>31</span>"; ?>
+         </div>
+       </article>
+
+       <article class="box">
+         <h2>Chamadas por Funcionários:</h2>
+
+         <div class="table">
+           <table>
+             <tr>
+               <td>Nome Do Funcionário</td>
+               <td name="chamadas_atendidas">Chamadas Atendidadas</td>
+               <td name="valor_chamadas">Valor Total das Chamadas</td>
+             </tr>
+           </table>
+
+           <?php
+
+            $queryNomeFuncionario = "SELECT user_nome FROM user_none";
+            $resultNomeFuncionario = mysqli_query($conn, $queryNomeFuncionario);
+            $dadosNomeFuncionario = mysqli_fetch_assoc($resultNomeFuncionario);
+            $rowNomeFuncionario = mysqli_num_rows($resultNomeFuncionario);
+
+              echo "<tr>";
+                echo "<td name='nome_funcionario'>" . $dadosNomeFuncionario['user_nome'] . "</td>";
+                echo "<td name='chamadas_atendidas'></td>";
+                echo "<td name='valor_chamadas'></td>";
+              echo "</tr>";
+
+            ?>
+
+         </div>
+
+       </article>
+
+     </main>
+
 </body>
 </html>

@@ -34,10 +34,8 @@
 
          <ul>
            <li><a href="index.php">Painel</a></li>
-           <li><a href="createOrd.php">Criar Ordem de Serviço</a></li>
            <li><a href="registrosOrdens.php">Registros de Ordens</a></li>
            <li><a href="#">Perfil</a></li>
-           <li><a href="#">Casdastrar</a></li>
            <li><a href="../logout.php">Sair</a></li>
          </ul>
        </div>
@@ -63,23 +61,23 @@
          <ul>
            <?php
               $a = $_GET['a'];
+              $nome = $_SESSION['nome'];
 
               if($a == "buscar"){
 
               $filter = $_POST['filter'];
 
-              $queryFilter = "SELECT * FROM chamadas ORDER BY $filter DESC";
-              $resultFilter = mysqli_query($conn, $queryFilter);
-
+              $query = "SELECT * FROM chamadas WHERE cha_nome_funcionario = '$nome' ORDER BY $filter DESC";
+              $result = mysqli_query($conn, $query);
 
               echo "Ordenado por <u><b>" . $filter . "</u></b>";
 
-              while($cow = mysqli_fetch_assoc($resultFilter)){
+              while($cow = mysqli_fetch_assoc($result)){
             ?>
 
             <div class="ordem">
               <li><?php echo "<span name='id'>Identificação da Ordem: </span>" . $cow['cha_id']; ?><li>
-              <li><?php echo "<span>Valor da Ordem: </span>R$" . $cow['cha_valor'];  echo "<form method='POST' action='php/registro/editar_dados.php'><input type='submit' value='Editar'></form>"; ?></li>
+              <li><?php echo "<span>Valor da Ordem: </span>R$" . $cow['cha_valor']; ?></li>
               <li><?php echo "<span>Nome do Admin Criador: </span>" . $cow['cha_nome_admin']; ?></li>
               <li><?php echo "<span>Nome do Funcionário Prestador: </span>" . $cow['cha_nome_funcionario']; ?></li>
               <li><?php echo "<span>Nome do Cliente: </span>" . $cow['cha_nome_cliente']; ?></li>
@@ -87,6 +85,7 @@
               <li><?php echo "<span>Data: </span>" . $cow['cha_data']; ?></li>
               <li><?php echo "<span>Hora: </span>" . $cow['cha_hora']; ?></li>
             </div>
+
 
           <?php }} ?>
 

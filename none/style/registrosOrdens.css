@@ -1,15 +1,13 @@
 /* MAIN */
 .main h1{
   padding: 5%;
-  padding-right: 1%;
   font-size: 30px;
   display: inline-block;
-  width: 30%;
+  width: 40%;
 }
 .main form{
   display: inline-block;
-  width: 29%;
-  margin-left: 0;
+  width: 40%;
 }
 .box{
   width: 80%;
@@ -34,7 +32,7 @@
 }
 .ordem form{
   display: inline-block;
-  margin-left: 5%;
+  margin-left: 10%;
 }
 .ordem span[name='id']{
   text-decoration: underline;

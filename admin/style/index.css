@@ -1,0 +1,46 @@
+.main h1{
+  padding: 5%;
+}
+.box{
+  width: 80%;
+  margin-left: 10%;
+  display: block;
+  margin-bottom: 5%;
+}
+.box h2{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 2%;
+  font-weight: lighter;
+}
+.boxDivision{
+  width: 20%;
+  display: inline-block;
+  padding: 1%;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  text-align: center;
+  background-color: #094DDE;
+  color: #fff;
+  font-weight: lighter;
+}
+.boxDivision h4{
+  font-weight: lighter;
+}
+.boxDivision span{
+  font-size: 40px;
+}
+.table{
+  width: 100%;
+}
+.table table{
+  width: 100%;
+  border: 1px solid #000;
+}
+.table tr td[name='nome_funcionario']{
+  width: 50%;
+}
+.table tr td[name='chamadas_atendidas']{
+  width: 25%;
+}
+.table tr td[name='valor_chamadas']{
+  width: 25%;
+}
