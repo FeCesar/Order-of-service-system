@@ -1,5 +1,8 @@
-.main h1{
-  padding: 5%;
+.main h1[name="titulo"]{
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 0;
 }
 .box{
   width: 80%;

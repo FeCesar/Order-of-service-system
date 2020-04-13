@@ -1,0 +1,51 @@
+.main h1{
+  padding: 5%;
+}
+.main h3{
+  margin-left: 5%;
+  margin-bottom: 3%;
+  display: inline-block;
+}
+.main nav{
+  display: inline-block;
+  width: 60%;
+  margin-left: 5%;
+}
+.form{
+  display: inline-block;
+  width: 20%;
+  float: right;
+}
+.form input[type='submit']{
+  display: inline-block;
+  padding: 5%;
+  float: right;
+  color: white;
+  background-color: #094DDE;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.form input:hover{
+  transition: 0.3s;
+  background: white;
+  color: #094DDE;
+}
+.aside{
+  width: 100%;
+}
+.box{
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 5%;
+  width: 30%;
+  display: inline-block;
+  border: 1px rgba(9, 27, 222, 0.7) solid;
+  padding: 2%;
+}
+.box ul{
+  list-style: none;
+}
+.box ul li{
+  padding: 2%;
+}

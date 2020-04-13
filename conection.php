@@ -1,11 +1,11 @@
 <?php
 
-  define('HOST', '127.0.0.1');
-  define('USUARIO', 'root');
-  define('SENHA', '');
-  define('DB', 'servicos');
+$host = '127.0.0.1';
+$usuario = 'root';
+$senha = '';
+$banco = 'sistema_ordem_de_servico';
 
-  $conn = mysqli_connect(HOST, SENHA, USUARIO, DB) or die("Não foi possivel conectar!");
-  mysqli_set_charset($conn, 'utf-8');
+$conn = new mysqli($host, $usuario, $senha, $banco) or die("Não foi possivel conectar!");
+mysqli_set_charset($conn, 'utf-8');
 
  ?>

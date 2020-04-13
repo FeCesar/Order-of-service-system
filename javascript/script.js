@@ -29,3 +29,12 @@ function btn_fechar(){
   var elementTree = document.getElementById('btn_abrir');
   elementTree.style.display = "inline-block";
 }
+
+function show_formulario_admin(){
+  document.getElementById("formulario_admin").style.display = "block";
+  document.getElementById("formulario_funcionario").style.display = "none";
+}
+function show_formulario_funcionario(){
+  document.getElementById("formulario_funcionario").style.display = "block";
+  document.getElementById("formulario_admin").style.display = "none";
+}

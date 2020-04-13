@@ -1,0 +1,30 @@
+.main h1{
+  padding: 5%;
+}
+.main ul{
+  margin-left: 5%;
+  list-style: none;
+}
+.main ul li{
+  padding: 1%;
+  font-size: 20px;
+  border-bottom: 1px rgba(9, 27, 222, 0.7) solid;
+  width: 70%;
+}
+.main ul li span[name='primeiraColuna']{
+  font-weight: bold;
+}
+.main ul li span[name='segundaColuna']{
+  font-weight: lighter;
+  text-decoration: none;
+  margin-left: 1%;
+}
+.main ul li form{
+  float: right;
+}
+.main ul li form input[type='text']{
+  display: none;
+}
+.main ul li form input[type='email']{
+  display: none;
+}

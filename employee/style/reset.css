@@ -9,8 +9,8 @@
 .menu{
   width: 20%;
   background-color: #094DDE;
-  position: fixed;
-  height: 100%;
+  position: absolute;
+  height: 800px;
   display: inline-block;
 }
 .menu h1{
