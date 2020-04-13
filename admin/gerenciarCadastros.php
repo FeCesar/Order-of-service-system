@@ -56,12 +56,13 @@
          <h3>Usuários Administradores</h3>
          <nav>
            <form class="form" action="php/gerenciarCadastros/deleta_usuario_admin.php" method="post">
-             <input type="text" name="adm" style="display: none;">
              <input type="submit" value="Deletar Usuários">
            </form>
            <form class="form" action="php/gerenciarCadastros/edita_usuario_admin.php" method="post">
-             <input type="text" name="adm" style="display: none;">
              <input type="submit" value="Editar Usuários">
+           </form>
+           <form class="form" action="php/gerenciarCadastros/procurar_user_admin.php" method="post">
+             <input type="submit" value="Procurar Usuários">
            </form>
          </nav>
          <?php
@@ -93,8 +94,10 @@
                <input type="submit" name="enviar" value="Deletar Usuários">
              </form>
              <form class="form" action="php/gerenciarCadastros/edita_usuario_employee.php" method="post">
-               <input type="text" name="adm" style="display: none;">
                <input type="submit" name="enviar" value="Editar Usuários">
+             </form>
+             <form class="form" action="php/gerenciarCadastros/procurar_user_employee.php" method="post">
+               <input type="submit" value="Procurar Usuários">
              </form>
            </nav>
          <?php
